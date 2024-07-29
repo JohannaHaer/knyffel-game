@@ -135,7 +135,21 @@ const winCard = {
     },
     chance: (arr) => {
         return arr[0] + arr[1] + arr[2] + arr[3] + arr[4]
-    }
+    },
+    smallStraight: (arr) => {
+        if ((arr.includes(1) && arr.includes(2) && arr.includes(3) && arr.includes(4)) || (arr.includes(2) && arr.includes(3) && arr.includes(4) && arr.includes(5)) || (arr.includes(3) && arr.includes(4) && arr.includes(5) && arr.includes(6))) {
+            return 30
+        } else {
+            return 0
+        }
+    },
+    largeStraight: (arr) => {
+        if ((arr.includes(1) && arr.includes(2) && arr.includes(3) && arr.includes(4)  && arr.includes(5)) || (arr.includes(2) && arr.includes(3) && arr.includes(4) && arr.includes(5)  && arr.includes(6))) {
+            return 40
+        } else {
+            return 0
+        }
+    },
 }
 
 export default winCard

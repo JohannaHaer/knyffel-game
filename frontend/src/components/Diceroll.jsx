@@ -85,6 +85,12 @@ const Diceroll = () => {
       <div>
         {winCard?.chance(diceArray)}
       </div>
+      <div>
+        {winCard?.smallStraight(diceArray)}
+      </div>
+      <div>
+        {winCard?.largeStraight(diceArray)}
+      </div>
     </>
   )
 }
