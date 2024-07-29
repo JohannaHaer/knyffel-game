@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { mainContext } from '../context/mainProvider'
-
+import winCard from './checkWins'
 
 const Diceroll = () => {
   const {diceArray, setDiceArray, clicked1, setClicked1, clicked2, setClicked2, clicked3, setClicked3, clicked4, setClicked4, clicked5, setClicked5} = useContext(mainContext)
@@ -40,8 +40,6 @@ const Diceroll = () => {
     setDiceArray(copyArray)
   }
 
-  console.log(diceArray);
-
   return (
     <>
       <form onSubmit={rollDice}>
@@ -54,6 +52,24 @@ const Diceroll = () => {
         </div>
         <button type='submit'>Roll</button>
       </form>
+      <div>
+        {winCard?.ones(diceArray)}
+      </div>
+      <div>
+        {winCard?.twos(diceArray)}
+      </div>
+      <div>
+        {winCard?.threes(diceArray)}
+      </div>
+      <div>
+        {winCard?.fours(diceArray)}
+      </div>
+      <div>
+        {winCard?.fives(diceArray)}
+      </div>
+      <div>
+        {winCard?.sixs(diceArray)}
+      </div>
     </>
   )
 }
