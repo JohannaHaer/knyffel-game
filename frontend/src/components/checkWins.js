@@ -53,6 +53,67 @@ const winCard = {
        }); 
        return points
     },
+    threeOfAKind: (arr) => {
+        let win = false
+        arr.forEach(element => {
+            let counter = 0
+            arr.forEach(element2 => {
+                if (element == element2) {
+                    counter += 1
+                }
+            });
+            if (counter >= 3) {
+                win = true
+            }
+        });
+        if (win) {
+            return arr[0] + arr[1] + arr[2] + arr[3] + arr[4]
+        } else {
+            return 0
+        }
+    },
+    fourOfAKind: (arr) => {
+        let win = false
+        arr.forEach(element => {
+            let counter = 0
+            arr.forEach(element2 => {
+                if (element == element2) {
+                    counter += 1
+                }
+            });
+            if (counter >= 4) {
+                win = true
+            }
+        });
+        if (win) {
+            return arr[0] + arr[1] + arr[2] + arr[3] + arr[4]
+        } else {
+            return 0
+        }
+    },
+    fullHouse: (arr) => {
+        let pash = false
+        let tripple = false
+        arr.forEach(element => {
+            let counter = 0
+            arr.forEach(element2 => {
+                if (element == element2) {
+                    counter += 1
+                }
+            });
+            if (counter === 2) {
+                pash = true
+            }
+            if (counter === 3) {
+                tripple = true
+            }
+        });
+        if (pash && tripple) {
+            return 25
+        } else {
+            return 0
+        }
+    }
 }
 
 export default winCard

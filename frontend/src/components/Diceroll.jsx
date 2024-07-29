@@ -70,6 +70,15 @@ const Diceroll = () => {
       <div>
         {winCard?.sixs(diceArray)}
       </div>
+      <div>
+        {winCard?.threeOfAKind(diceArray)}
+      </div>
+      <div>
+        {winCard?.fourOfAKind(diceArray)}
+      </div>
+      <div>
+        {winCard?.fullHouse(diceArray)}
+      </div>
     </>
   )
 }
