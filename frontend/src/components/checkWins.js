@@ -113,6 +113,28 @@ const winCard = {
         } else {
             return 0
         }
+    },
+    knyffel: (arr) => {
+        let knyffel = false
+        arr.forEach(element => {
+            let counter = 0
+            arr.forEach(element2 => {
+                if (element == element2) {
+                    counter += 1
+                }
+            });
+            if (counter === 5) {
+                knyffel = true
+            }
+        });
+        if (knyffel) {
+            return 50
+        } else {
+            return 0
+        }
+    },
+    chance: (arr) => {
+        return arr[0] + arr[1] + arr[2] + arr[3] + arr[4]
     }
 }
 

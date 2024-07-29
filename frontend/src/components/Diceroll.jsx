@@ -79,6 +79,12 @@ const Diceroll = () => {
       <div>
         {winCard?.fullHouse(diceArray)}
       </div>
+      <div>
+        {winCard?.knyffel(diceArray)}
+      </div>
+      <div>
+        {winCard?.chance(diceArray)}
+      </div>
     </>
   )
 }
