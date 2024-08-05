@@ -1,0 +1,15 @@
+.upperSection {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    border: 1px solid black;
+}
+
+.gridBorder {
+    border: 1px solid black;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
