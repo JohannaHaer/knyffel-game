@@ -52,72 +52,124 @@ const Diceroll = () => {
         </div>
         <button type='submit'>Roll</button>
       </form>
-      <section className='upperSection'>
-    
-          <div className='gridBorder'>
-            <p>Ones</p>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <p className='gridBorder'>Sum of all Ones</p>
-          <p className='gridBorder'>{winCard?.ones(diceArray)}</p>
-          <button className='gridBorder'>Choose</button>
-   
-      
-          <div className='gridBorder'>
-            <p>Twos</p>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <p className='gridBorder'>Sum of all Twos</p>
-          <p className='gridBorder'>{winCard?.twos(diceArray)}</p>
-          <button className='gridBorder'>Choose</button>
 
-
-          <div className='gridBorder'>
-            <p>Threes</p>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <p className='gridBorder'>Sum of all Threes</p>
-          <p className='gridBorder'>{winCard?.threes(diceArray)}</p>
-          <button className='gridBorder'>Choose</button>
-   
-     
-          <div className='gridBorder'>
-            <p>Fours</p>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <p className='gridBorder'>Sum of all Fours</p>
-          <p className='gridBorder'>{winCard?.fours(diceArray)}</p>
-          <button className='gridBorder'>Choose</button>
-
-          <div className='gridBorder'>
-            <p>Fives</p>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <p className='gridBorder'>Sum of all Fives</p>
-          <p className='gridBorder'>{winCard?.fives(diceArray)}</p>
-          <button className='gridBorder'>Choose</button>
-    
-          <div className='gridBorder'>
-            <p>Sixs</p>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <p className='gridBorder'>Sum of all Sixs</p>
-          <p className='gridBorder'>{winCard?.sixs(diceArray)}</p>
-          <button className='gridBorder'>Choose</button>
-    
-      </section>
+      <table>
+        <tr>
+          <td>Ones</td>
+          <td>Sum of all Ones</td>
+          <td>{winCard?.ones(diceArray)}</td>
+          <td><button className='chooseButton'>Choose</button></td>
+        </tr>
+        <tr>
+          <td>Twos</td>
+          <td>Sum of all Twos</td>
+          <td>{winCard?.twos(diceArray)}</td>
+          <td><button className='chooseButton'>Choose</button></td>
+        </tr>
+        <tr>
+          <td>Threes</td>
+          <td>Sum of all Threes</td>
+          <td>{winCard?.threes(diceArray)}</td>
+          <td><button className='chooseButton'>Choose</button></td>
+        </tr>
+        <tr>
+          <td>Fours</td>
+          <td>Sum of all Fours</td>
+          <td>{winCard?.fours(diceArray)}</td>
+          <td><button className='chooseButton'>Choose</button></td>
+        </tr>
+        <tr>
+          <td>Fives</td>
+          <td>Sum of all Fives</td>
+          <td>{winCard?.fives(diceArray)}</td>
+          <td><button className='chooseButton'>Choose</button></td>
+        </tr>
+        <tr>
+          <td>Sixs</td>
+          <td>Sum of all Sixs</td>
+          <td>{winCard?.sixs(diceArray)}</td>
+          <td><button className='chooseButton'>Choose</button></td>
+        </tr>
+        <tr className='bolderBorder'>
+          <td>Total</td>
+          <td>➡️</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Bonus for 63 points or more</td>
+          <td>plus 35</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr className='doubleLineBottom'>
+          <td>Total upper section</td>
+          <td>➡️</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr className='spacer'></tr>
+        <tr className='doubleLineTop'>
+          <td>3 of a kind</td>
+          <td>Sum of all dice if 3 are the same</td>
+          <td>{winCard?.threeOfAKind(diceArray)}</td>
+          <td><button className='chooseButton'>Choose</button></td>
+        </tr>
+        <tr>
+          <td>4 of a kind</td>
+          <td>Sum of all dice if 4 are the same</td>
+          <td>{winCard?.threeOfAKind(diceArray)}</td>
+          <td><button className='chooseButton'>Choose</button></td>
+        </tr>
+        <tr>
+          <td>Full House</td>
+          <td>25 points for a full house</td>
+          <td>{winCard?.fullHouse(diceArray)}</td>
+          <td><button className='chooseButton'>Choose</button></td>
+        </tr>
+        <tr>
+          <td>Small Straight</td>
+          <td>30 points for a small straight</td>
+          <td>{winCard?.smallStraight(diceArray)}</td>
+          <td><button className='chooseButton'>Choose</button></td>
+        </tr>
+        <tr>
+          <td>Large Straight</td>
+          <td>40 points for a large straight</td>
+          <td>{winCard?.largeStraight(diceArray)}</td>
+          <td><button className='chooseButton'>Choose</button></td>
+        </tr>
+        <tr>
+          <td>Knyffel</td>
+          <td>50 points for a knyffel</td>
+          <td>{winCard?.knyffel(diceArray)}</td>
+          <td><button className='chooseButton'>Choose</button></td>
+        </tr>
+        <tr>
+          <td>Chance</td>
+          <td>Sum all dice</td>
+          <td>{winCard?.chance(diceArray)}</td>
+          <td><button className='chooseButton'>Choose</button></td>
+        </tr>
+        <tr className='bolderBorder'>
+          <td>Total lower section</td>
+          <td>➡️</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Total upper section</td>
+          <td>➡️</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Final sum</td>
+          <td>➡️</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
     </>
   )
 }

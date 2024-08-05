@@ -1,15 +1,47 @@
-.upperSection {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    border: 1px solid black;
+button {
+    cursor: pointer;
 }
 
-.gridBorder {
-    border: 1px solid black;
-    height: 100%;
+table {
+    margin: 0 20%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-   
+}
+tr {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr 1fr;
+}
+
+td {
+    padding: 1rem 0;
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+    position: relative;
+}
+
+.bolderBorder {
+    border-top: 2px solid black;
+}
+
+.doubleLineBottom {
+    border-bottom: 5px double black;
+}
+
+.doubleLineTop {
+    border-top: 5px double black;
+}
+
+.spacer {
+    height: 1rem;
+}
+
+.chooseButton {
+    position: absolute;
+    top: 0;
+    right: 0; 
+    height: 99%;
+    width: 99%;
+    border: none;
 }
